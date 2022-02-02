@@ -6,18 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <script src="{{ asset('js/app.js') }}"></script>
-    
+
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <title>Document</title>
 </head>
 <body>
-    @include('components.header')
-
-    <main>
-        @yield('content')
-    </main>
-
-    @include('components.footer')
+    <div id="app">
+        @include('components.header')
+    
+        <main>
+            @yield('content')
+        </main>
+    
+        @include('components.footer')
+    </div>
 </body>
 </html>
