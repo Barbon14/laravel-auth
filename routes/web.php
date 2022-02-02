@@ -8,10 +8,11 @@ use Illuminate\Support\Facades\Route;
 
 // Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/', 'GuestController@home');
+Route::get('/', 'GuestController@home')->name('home');
 
 Route::post('/login', 'Auth\LoginController@login')->name('login');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::post('/register', 'Auth\RegisterController@register')->name('register');

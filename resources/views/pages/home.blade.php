@@ -6,6 +6,13 @@
         Hello Auth
     </h1>
 
+    @auth
+        <h2>Ciao {{ Auth::user() -> name }}!</h2>
+        <a class="btn btn-secondary" href="{{ route('logout') }}">LOGOUT</a>
+    @else
+        <h2>Registrati o effettua il Login</h2>
+    @endauth
+
     <h2>Register</h2>
     <form action="{{ route('register') }}" method="POST">
 
@@ -42,4 +49,4 @@
 
     </form>
 
-@endsection
+    @endsection
